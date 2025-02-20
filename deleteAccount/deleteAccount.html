@@ -17,8 +17,8 @@
                             alert('账号删除成功，账号密码正确将在 15 天后自动清除，如果中间登录游戏则取消删除，删除之后不可恢复');
                             document.getElementById('result').innerText = '账号已提交删除';
                         } else if (xhr.readyState === 4) {
-                            alert('删除请求失败');
-                            document.getElementById('result').innerText = '删除请求失败';
+                            alert('删除请求等待完成');
+                            document.getElementById('result').innerText = '删除请求等待完成';
                         }
                     };
                     xhr.send();
