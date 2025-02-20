@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>删除奇迹之书账号</title>
+    <script>
+        function confirmDelete() {
+            const account = document.getElementById('account').value;
+            const password = document.getElementById('password').value;
+            if (account && password) {
+                if (confirm('确认删除账号？')) {
+                    alert('账号删除成功，账号密码正确将在 15 天后自动清除，如果中间登录游戏则取消删除，删除之后不可恢复');
+                    document.getElementById('result').innerText = '账号已删除';
+                } else {
+                    alert('取消删除');
+                    document.getElementById('result').innerText = '账号未删除';
+                }
+            } else {
+                alert('请输入账号和密码');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>删除奇迹之书账号</h1>
+    <form onsubmit="event.preventDefault(); confirmDelete();">
+        <label for="account">账号:</label>
+        <input type="text" id="account" name="account" required><br><br>
+        <label for="password">密码:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <button type="submit">确认删除</button>
+    </form>
+    <p id="result"></p>
+</body>
+</html>
