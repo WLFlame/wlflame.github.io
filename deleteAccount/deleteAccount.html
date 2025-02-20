@@ -10,7 +10,7 @@
             if (account && password) {
                 if (confirm('确认删除账号？')) {
                     const xhr = new XMLHttpRequest();
-                    const url = `http://106.14.148.162/reqDelete?account=${encodeURIComponent(account)}&password=${encodeURIComponent(password)}`;
+                    const url = `http://106.14.148.162:3001/reqDelete?account=${encodeURIComponent(account)}&password=${encodeURIComponent(password)}`;
                     xhr.open('GET', url, true);
                     xhr.onreadystatechange = function () {
                         if (xhr.readyState === 4 && xhr.status === 200) {
